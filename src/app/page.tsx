@@ -6,7 +6,7 @@ import MealCard from "@/components/meal-card";
 
 type Meal = { idMeal: string; strMeal: string; strMealThumb: string };
 
-// اگر .env.local ست نشده بود، توی لوکال از پروکسی اکسپرس استفاده کن
+// If NEXT_PUBLIC_PROXY_BASE isn't set, fall back to a local Express proxy when running on localhost
 const FALLBACK_BASE =
   typeof window !== "undefined" &&
   (window.location.hostname === "localhost" ||
@@ -14,7 +14,7 @@ const FALLBACK_BASE =
     ? "http://127.0.0.1:8080/mealdb"
     : "";
 
-// ✅ این خطِ حیاتی بود که توی کدت نبود
+// Proxy base URL: from the environment in production, local fallback in development
 const BASE = process.env.NEXT_PUBLIC_PROXY_BASE || FALLBACK_BASE;
 
 async function getJSON(url: string) {

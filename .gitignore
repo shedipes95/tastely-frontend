@@ -14,7 +14,7 @@ out/
 dist/
 coverage/
 
-# Env files (نمونه‌ها رو نگه دار)
+# Env files (keep the examples)
 .env
 .env.*
 !.env.example
@@ -25,6 +25,9 @@ coverage/
 Thumbs.db
 *.swp
 
-# VS Code (Optional: فقط تنظیمات اشتراکی بمونه)
+# VS Code (keep only shared settings)
 .vscode/*
 !.vscode/extensions.json
+.vercel
+.env*
+!.env.local.example

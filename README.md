@@ -2,6 +2,8 @@
 
 A small recipe browsing app built with Next.js (App Router), TypeScript, and Tailwind CSS. Search for meals, filter by category, and open a recipe to see its ingredients and instructions.
 
+**Live demo: [tastely-frontend.vercel.app](https://tastely-frontend.vercel.app)** (deployed on Vercel, with the proxy also running on Vercel)
+
 ## What it does
 
 - **Search** for meals by name (e.g. "pasta").
@@ -64,4 +66,4 @@ The frontend expects a proxy that exposes TheMealDB endpoints (`/search.php`, `/
 ## Notes
 
 - Remote images are allowed from `www.themealdb.com` via `next.config.mjs`.
-- This is the frontend only; the proxy that serves the meal data lives separately.
+- This is the frontend only; the proxy that serves the meal data lives separately in [mealdb-proxy-express](https://github.com/shedipes95/mealdb-proxy-express).
